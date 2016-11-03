@@ -1,4 +1,4 @@
-var app = angular.module('customPage');
+var app = angular.module('email');
 
 app.service('textService', function($http, $q) {
 

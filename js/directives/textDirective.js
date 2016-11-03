@@ -1,6 +1,4 @@
-
-
-angular.module('customPage').directive('textDirective', function (textService) {
+angular.module('email').directive('textDirective', function (textService) {
   return {
     restrict: 'E',
     templateUrl: 'js/templates/textDirective.html',

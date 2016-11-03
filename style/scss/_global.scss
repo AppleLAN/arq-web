@@ -21,7 +21,16 @@ h2 {
   font-family: 'Vollkorn', sans-serif;
 
 }
-
+.content-box {
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+.logo {
+  width: 30px;
+  height: auto;
+  border-radius: 45px;
+}
 a {
   color: $coffe-light-color;
 
