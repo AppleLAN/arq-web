@@ -1,0 +1,6 @@
+.option {
+  display: block;
+  &:hover {
+    background-color:$light-grey;
+  }
+}
