@@ -19,8 +19,18 @@ angular
         sidebar.showFolder = false;
         sidebar.newFolderName = "";
       }
+      function findFolder(folder) {
+        var aux = false;
+        angular.forEach(sidebar.folders, function(value, key) {
+          if(folder === value.name)
+            aux = true;
+        });
+        return aux;
+      }
       sidebar.addFolder =function() {
-        if(!!sidebar.newFolderName){
+        sidebar.nameError = false;
+        sidebar.alreadyError = false;
+        if(!!sidebar.newFolderName && !findFolder(sidebar.newFolderName)){
           var folder = {
             "name" : sidebar.newFolderName,
             "emails": [{
@@ -30,6 +40,14 @@ angular
           sidebar.showFolder = false;
           sidebar.folders.push(folder);
           sharedData.setFolders(sidebar.folders);
+        }
+        else {
+          if(!!sidebar.newFolderName === false){
+            sidebar.nameError = true;
+          }
+          else {
+            sidebar.alreadyError = true;
+          }
         }
       }
       sidebar.removeFolder =function(folder) {
