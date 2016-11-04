@@ -6,5 +6,11 @@
   <li><a class="option pl10 mt5 pt5 pb5 mb5 pt5 pb5" href="#">Sent Email</a></li>
   <li><a class="option pl10 mt5 pt5 pb5 mb5 pt5 pb5" href="#">Drafts</a></li>
   <li><a class="option pl10 mt5 pt5 pb5 mb5 pt5 pb5" href="#">Spam</a></li>
+  <li ng-repeat="folder in sidebar.folders">
+    <a class="option pl10 mt5 pt5 pb5 mb5 pt5 pb5" href="#">{{folder.name}}</a>
+  </li>
+  <li><a ng-click="sidebar.showAddInput()" class="option pl10 mt5 pt5 pb5 mb5 pt5 pb5" href="">+</a></li>
+  <li><input ng-if="sidebar.showFolder == true" ng-model="sidebar.newFolderName" class="new-folder-input option pl10 mt5 pt5 pb5 mb5 pt5 pb5"></li>
+  <li><button ng-if="sidebar.showFolder == true" ng-click="sidebar.addFolder()" class="btn button option pl10 mt5 pt5 pb5 mb5 pt5 pb5">Add</button></li>
 </ul>
 </div>
