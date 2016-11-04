@@ -1,5 +1,8 @@
-var app = angular.module('app');
-app.controller('emailController', function ($scope, $location) {
+(function () {
+'use strict';
+angular
+.module('app')
+.controller('emailController', function ($scope, $location) {
   var email = {};
   email.isActive = function (viewLocation) {
     return viewLocation === $location.path();
@@ -7,3 +10,4 @@ app.controller('emailController', function ($scope, $location) {
   email.test="hola";
   $scope.email = email;
 });
+})();

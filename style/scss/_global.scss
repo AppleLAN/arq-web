@@ -23,7 +23,7 @@ h2 {
 }
 .content-box {
   padding: 10px;
-  border: solid 1px black;
+  border: solid 1px $darker-grey;
   border-radius: 15px;
 }
 .logo {
@@ -40,7 +40,14 @@ a {
   }
 
 }
-
+.no-margin {
+  margin: 0;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
 .brown {
   color: $coffe-light-color;
 }

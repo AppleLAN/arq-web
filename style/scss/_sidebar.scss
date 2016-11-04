@@ -1,7 +1,14 @@
 .option {
   display: block;
+  width: 100%;
   &:hover {
     background-color:$light-grey;
+  }
+  &.custom-folder {
+    display: inline-block;
+  }
+  .delete {
+    padding-right: 10px;
   }
 }
 .new-folder-input{

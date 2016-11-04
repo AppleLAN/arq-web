@@ -5,6 +5,9 @@ app.config(['$routeProvider',function($routeProvider){
     .when('/',{
       templateUrl: "/email/views/email-main.html",
       controller: "emailController",
-      controllerAs: "home"
+    })
+    .when('/email',{
+      templateUrl: "/email/views/personal-email.html",
+      controller: "personalEmailController",
     })
 }]);
