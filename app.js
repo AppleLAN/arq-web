@@ -1,4 +1,4 @@
-var app = angular.module('customPage',[
-  "customPage.routes",
+var app = angular.module('app',[
+  "app.routes",
   "ngMessages"
 ]);

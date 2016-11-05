@@ -21,7 +21,19 @@ h2 {
   font-family: 'Vollkorn', sans-serif;
 
 }
-
+.error {
+  color: red;
+}
+.content-box {
+  padding: 10px;
+  border: solid 1px $darker-grey;
+  border-radius: 15px;
+}
+.logo {
+  width: 30px;
+  height: auto;
+  border-radius: 45px;
+}
 a {
   color: $coffe-light-color;
 
@@ -31,7 +43,14 @@ a {
   }
 
 }
-
+.no-margin {
+  margin: 0;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
 .brown {
   color: $coffe-light-color;
 }
@@ -74,6 +93,7 @@ a {
 .ml50{margin-left: 50px}
 
 .mt0{margin-top: 0px}
+.mt5{margin-top: 5px}
 .mt10{margin-top: 10px}
 .mt15{margin-top: 15px}
 .mt20{margin-top: 20px}
@@ -89,6 +109,7 @@ a {
 .mt120{margin-top: 120px}
 
 .mb0{margin-bottom: 0px}
+.mb5{margin-bottom: 5px}
 .mb10{margin-bottom: 10px}
 .mb20{margin-bottom: 20px}
 .mb25{margin-bottom: 25px}
@@ -102,6 +123,7 @@ a {
 .mb100{margin-bottom: 100px}
 
 .pt0{padding-top: 0px}
+.pt5{padding-top: 5px}
 .pt10{padding-top: 10px}
 .pt15{padding-top: 15px}
 .pt20{padding-top: 20px}
@@ -117,6 +139,7 @@ a {
 .pt120{padding-top: 120px}
 
 .pb0{padding-bottom: 0px}
+.pb5{padding-bottom: 5px}
 .pb10{padding-bottom: 10px}
 .pb20{padding-bottom: 20px}
 .pb25{padding-bottom: 25px}
