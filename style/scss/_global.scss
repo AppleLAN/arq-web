@@ -16,7 +16,14 @@
 html {
   font-family: 'Open Sans', sans-serif;
 }
-
+body {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ), url("/images/wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+}
 h2 {
   font-family: 'Vollkorn', sans-serif;
 
@@ -28,6 +35,7 @@ h2 {
   padding: 10px;
   border: solid 1px $darker-grey;
   border-radius: 15px;
+  background-color: white;
 }
 .logo {
   width: 30px;
