@@ -3,6 +3,9 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\City;
+use App\Message;
+use App\Destinatario;
 
 class User extends Authenticatable
 {
@@ -12,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'usrName','usrLastname', 'email', 'password', 'usrUsername',
     ];
 
     /**
@@ -23,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function city() {
+        return $this->belongsTo('App\City');
+    }
+
+    public function messages() {
+        return $this->belongsToMany('App\Message');
+    }
+
+    public function destinatario(){
+        return $this->hasOne('App\Destinatario');
+    }
 }
