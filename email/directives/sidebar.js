@@ -15,10 +15,14 @@ angular
         sidebar.showFolder = true;
       }
       sidebar.newFolderName = "";
+
       sidebar.cancel = function() {
+        sidebar.nameError = false;
+        sidebar.alreadyError = false;
         sidebar.showFolder = false;
         sidebar.newFolderName = "";
       }
+
       function findFolder(folder) {
         var aux = false;
         angular.forEach(sidebar.folders, function(value, key) {
@@ -49,7 +53,10 @@ angular
             sidebar.alreadyError = true;
           }
         }
+        sidebar.newFolderName = "";
+
       }
+
       sidebar.removeFolder =function(folder) {
         angular.forEach(sidebar.folders, function(value, key) {
           if(folder === value.name)

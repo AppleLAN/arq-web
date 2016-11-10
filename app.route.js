@@ -10,4 +10,8 @@ app.config(['$routeProvider',function($routeProvider){
       templateUrl: "/email/views/personal-email.html",
       controller: "personalEmailController",
     })
+    .when('/login',{
+      templateUrl: "/email/views/login.html",
+      controller: "loginController",
+    })
 }]);

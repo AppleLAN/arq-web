@@ -20,10 +20,10 @@
       <div class="col-md-1"></div>
       <button ng-click="sidebar.cancel()" class="btn btn-default pl10 mt5 pt5 pb5 mb5 pt5 pb5 col-md-5 col-xs-12">Cancel</button>
     </div>
-    <div ng-if="sidebar.nameError" class="error">
+    <div ng-if="sidebar.nameError && sidebar.showFolder == true" class="error">
       Type a name please
     </div>
-    <div ng-if="sidebar.alreadyError" class="error">
+    <div ng-if="sidebar.alreadyError && sidebar.showFolder == true" class="error">
       Theres already a folder with the same name !
     </div>
   </li>
