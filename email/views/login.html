@@ -10,14 +10,14 @@
     <div class="page-content">
         <form name="Form">
 	        <div class="form-group" ng-class="{ 'has-error': Form.email.$touched && Form.email.$invalid }">
-	            <input type="email" placeholder="Enter email" class="form-control" name="email" ng-model="vm.userInfo.email" required >
+	            <input type="email" placeholder="Enter email" class="form-control" name="email" ng-model="login.userInfo.email" required >
               <div class="help-block text-left" ng-messages="Form.email.$error" ng-if="Form.email.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
 	        </div>
 
 	        <div class="form-group" ng-class="{ 'has-error': Form.password.$touched && Form.password.$invalid }">
-	            <input type="password" placeholder="Enter password" name="password" class="form-control" ng-model="vm.userInfo.password" required >
+	            <input type="password" placeholder="Enter password" name="password" class="form-control" ng-model="login.userInfo.password" required >
               <div class="help-block text-left" ng-messages="Form.password.$error" ng-if="Form.password.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
@@ -25,7 +25,7 @@
 
 	        <div class="form-group text-left" ng-class="{ 'has-error': Form.rememberMe.$touched && Form.rememberMe.$invalid }">
               <label class="form-check-label">Remember me ?
-                <input class="form-check-input" name="rememberMe" type="checkbox" placeholder="Personal email" ng-model="vm.userInfo.rememberMe">
+                <input class="form-check-input" name="rememberMe" type="checkbox" placeholder="Personal email" ng-model="login.userInfo.rememberMe">
               </label>
               <div class="help-block text-left" ng-messages="Form.rememberMe.$error" ng-if="Form.rememberMe.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
@@ -47,7 +47,7 @@
             <div ng-messages-include="/email/views/login-messages.html"></div>
           </div>
 
-          <div class="form-group text-left" ng-if="vm.validationError">
+          <div class="form-group text-left" ng-if="login.validationError">
              <p class="help-block">Wrong username or password entered. please try again.</p>
           </div>
         </form>
