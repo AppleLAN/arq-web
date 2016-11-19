@@ -11,7 +11,7 @@ angular
     $location.url('');
   };
   login.logIn = function () {
-    emailService.login(login.userInfo);
+    emailService.logIn(login.userInfo);
     $location.url('');
   };
   login.test="hola";
