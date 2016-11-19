@@ -8,7 +8,7 @@
 
           <div class="form-group" ng-class="{ 'has-error': sendMessageForm.to.$touched && sendMessageForm.to.$invalid }">
               <label for="to">To</label>
-              <input type="email" placeholder="Enter email" class="form-control" name="to" ng-model="register.userInfo.to" required >
+              <input type="email" placeholder="Enter email" class="form-control" name="to" ng-model="sendMessage.email.to" required >
               <div class="help-block text-left" ng-messages="sendMessageForm.to.$error" ng-if="sendMessageForm.to.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
@@ -16,7 +16,7 @@
 
           <div class="form-group" ng-class="{ 'has-error': sendMessageForm.subject.$touched && sendMessageForm.subject.$invalid }">
               <label for="subject">Subject</label>
-              <input type="subject" placeholder="Enter subject" class="form-control" name="subject" ng-model="register.userInfo.subject" required >
+              <input type="subject" placeholder="Enter subject" class="form-control" name="subject" ng-model="sendMessage.email.subject" required >
               <div class="help-block text-left" ng-messages="sendMessageForm.subject.$error" ng-if="sendMessageForm.subject.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
@@ -24,7 +24,7 @@
 
           <div class="form-group" ng-class="{ 'has-error': sendMessageForm.message.$touched && sendMessageForm.message.$invalid }">
               <label for="message">Message</label>
-              <textarea type="textArea" placeholder="Enter name" class="mt10 form-control" name="message" ng-model="register.userInfo.message" required ></textarea>
+              <textarea type="textArea" placeholder="Enter name" class="mt10 form-control" name="message" ng-model="sendMessage.email.message" required ></textarea>
               <div class="help-block text-left" ng-messages="sendMessageForm.message.$error" ng-if="sendMessageForm.message.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
