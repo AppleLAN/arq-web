@@ -2,11 +2,15 @@
 'use strict';
 angular
 .module('app')
-.directive('navbar', function () {
+.directive('navbar', function (emailService) {
   return {
     templateUrl: 'email/views/navbar.html',
     controller: function ($scope, $location) {
       var navbar = this;
+      navbar.logOut = function () {
+        emailService.logIn();
+        $location.url('login');
+      };
       $scope.navbar = navbar;
     },
   };
