@@ -12,7 +12,7 @@ function emailService($log, $http) {
   }
 
   function logOut() {
-    return $http.post('localhost:8080/logout');
+    return $http.get('localhost:8080/logout');
   }
 
   function sendEmail(email) {

@@ -12,7 +12,7 @@
 
           <div class="form-group" ng-class="{ 'has-error': registerForm.userName.$touched && registerForm.userName.$invalid }">
               <label for="userName">Nombre de Usuario</label>
-              <input type="register" placeholder="Enter user name" class="form-control" name="userName" ng-model="register.userInfo.userName" required >
+              <input type="register" placeholder="Enter user name" class="form-control" name="userName" ng-model="register.userInfo.username" required >
               <div class="help-block text-left" ng-messages="registerForm.userName.$error" ng-if="registerForm.userName.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
@@ -36,7 +36,7 @@
 
           <div class="form-group" ng-class="{ 'has-error': registerForm.lastName.$touched && registerForm.lastName.$invalid }">
               <label for="lastName">Last Name</label>
-              <input type="register" placeholder="Enter last name" class="form-control" name="lastName" ng-model="register.userInfo.lastName" required >
+              <input type="register" placeholder="Enter last name" class="form-control" name="lastName" ng-model="register.userInfo.lastname" required >
               <div class="help-block text-left" ng-messages="registerForm.lastName.$error" ng-if="registerForm.lastName.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
@@ -61,7 +61,7 @@
 
           <div class="form-group" ng-class="{ 'has-error': registerForm.birth.$touched && registerForm.birth.$invalid }">
               <label for="birth">Fecha de nacimiento</label>
-              <input type="date" placeholder="Enter birth date" class="form-control" name="birth" ng-model="register.userInfo.birthDate" required >
+              <input type="date" placeholder="Enter birth date" class="form-control" name="birth" ng-model="register.userInfo.birthdate" required >
               <div class="help-block text-left" ng-messages="registerForm.birth.$error" ng-if="registerForm.birth.$touched">
                   <div ng-messages-include="/email/views/login-messages.html"></div>
               </div>
